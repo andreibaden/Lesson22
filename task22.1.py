@@ -1,4 +1,7 @@
 def check_soft_asc(ls):
+    if not isinstance(ls, (list, tuple)):
+        return False
+
     for index in range(len(ls) - 1):
         if ls[index] >= ls[index + 1]:
             return False
@@ -7,6 +10,9 @@ def check_soft_asc(ls):
 
 
 def check_soft_desc(ls):
+    if not isinstance(ls, (list, tuple)):
+        return False
+
     for index in range(len(ls) - 1):
         if ls[index] <= ls[index + 1]:
             return False
